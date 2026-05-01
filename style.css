@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    height: 100vh;
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 420px;
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    color: white;
+    animation: fadeIn 1s ease;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.box {
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #27ae60;
+}
+
+/* 🎯 RESULT PRO */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* titre petit */
+.result .info {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+/* valeur normale */
+.result .value {
+    font-size: 18px;
+}
+
+/* classe énorme 🔥 */
+.result .classe {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+/* animation */
+.result.show {
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.7); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
